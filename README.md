@@ -1,8 +1,8 @@
 # KGenCenters
 
-Generalized K-Means clustering with pluggable cost metrics. Research code from the **AM-SURE 2023** program at NYU's Courant Institute of Mathematical Sciences, advised by **Esteban Tabak**.
+Generalized K-Means clustering with configurable cost metrics. Research code from the **AM-SURE 2023** program at NYU's Courant Institute of Mathematical Sciences, advised by **Esteban Tabak**.
 
-Standard K-Means is implicitly tied to squared-Euclidean distance: the within-cluster minimizer of that cost is the mean. The question motivating this work — *what happens when you swap in a different cost function?* The center that minimizes the new cost is no longer the mean. Depending on the metric it is a coordinate-wise median (L1), a geometric median (L2), or something computed via gradient descent (Lp, euclidean^n).
+Standard K-Means is implicitly tied to squared-Euclidean distance: the within-cluster minimizer of that cost is the mean. Swapping in a different cost function changes what the center update looks like — it becomes a coordinate-wise median (L1), a geometric median (L2), or something requiring gradient descent (Lp, euclidean^n).
 
 The framing comes from optimal transport: in the categorical-factor case, factor discovery reduces to a clustering problem, and OT yields natural generalizations of K-Means through new transport costs and initialization schemes. See the [project report](https://math.nyu.edu/media/math/filer_public/48/72/48728e1e-4bf3-4198-88c4-92ad56ac73cd/am_sure_5.pdf) and [slides](https://math.nyu.edu/media/math/filer_public/19/94/19947867-f928-4bdd-b2ec-4a97cd1f566a/final_presentation_clustering.pdf).
 
